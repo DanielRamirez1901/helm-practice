@@ -1,0 +1,4 @@
+apiVersion: v2
+name: zipkin
+description: A Helm chart for deploying zipkin
+version: 0.1.0

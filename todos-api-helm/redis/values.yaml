@@ -1,0 +1,6 @@
+replicaCount: 1
+image:
+  repository: redis
+  tag: alpine
+
+env: {} # No hay variables de entorno para Redis en este caso

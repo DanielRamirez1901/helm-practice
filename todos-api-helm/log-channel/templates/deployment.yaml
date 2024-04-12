@@ -1,0 +1,27 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: log-channel
+spec:
+  replicas: {{ .Values.replicaCount }}
+  selector:
+    matchLabels:
+      app: log-channel
+  template:
+    metadata:
+      labels:
+        app: log-channel
+    spec:
+      containers:
+      - name: log-channel
+        image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
+        imagePullPolicy: {{ .Values.image.pullPolicy }}
+        ports:
+        - containerPort: 6029
+        env:
+        - name: REDIS_HOST
+          value: "{{ .Values.env.REDIS_HOST }}"
+        - name: REDIS_PORT
+          value: "{{ .Values.env.REDIS_PORT }}"
+        - name: REDIS_CHANNEL
+          value: "{{ .Values.env.REDIS_CHANNEL }}"

@@ -1,0 +1,4 @@
+apiVersion: v2
+name: log-channel
+description: A Helm chart for deploying log-channel
+version: 0.1.0

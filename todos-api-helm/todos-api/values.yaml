@@ -1,0 +1,7 @@
+replicaCount: 1
+image:
+  repository: ventana1901/todos-api
+  tag: v1
+  pullPolicy: IfNotPresent
+
+env: {} # No hay variables de entorno adicionales en este caso

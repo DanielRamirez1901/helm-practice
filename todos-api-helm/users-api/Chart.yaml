@@ -1,0 +1,4 @@
+apiVersion: v2
+name: users-api
+description: A Helm chart for deploying users-api microservice
+version: 0.1.0
